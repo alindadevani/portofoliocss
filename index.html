@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Alinda Putri Devani</title>
+    <script>
+        function simpanData() {
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let tgl = document.getElementById("tgl").value;
+            let gender = document.getElementById("gender").value;
+            let hobi = document.getElementById("hobi").value;
+            
+            let biodata = { nama, email, tgl, gender, hobi };
+            localStorage.setItem("biodata", JSON.stringify(biodata));
+            alert("Data berhasil disimpan!");
+        }
+
+        function muatData() {
+            let biodata = JSON.parse(localStorage.getItem("biodata"));
+            if (biodata) {
+                document.getElementById("nama").value = biodata.nama;
+                document.getElementById("email").value = biodata.email;
+                document.getElementById("tgl").value = biodata.tgl;
+                document.getElementById("gender").value = biodata.gender;
+                document.getElementById("hobi").value = biodata.hobi;
+            }
+        }
+    </script>
+</head>
+<body onload="muatData()">
+    <header>
+        <img src="wuyll.png" width="100%" alt="Header Gambar Biodata">
+        
+    </header>
+    
+    <main>
+        <section>
+            <h2>Informasi Pribadi</h2>
+            <hr>
+            <p><strong>Nama:</strong> Alinda Putri Devani</p>
+            <p><strong>Program Studi:</strong> Sistem Informasi</p>
+            <p><strong>Universitas:</strong> Universitas Internasional Semen Indonesia</p>
+            <p><strong>Email:</strong> alinda.devani23@student.uisi.ac.id</p>
+            <p><strong>Cita-cita:</strong> Menjadi Pengusaha</p>
+        </section>
+        
+        <section>
+            <h2>Kegiatan</h2>
+            <hr>
+            <ul>
+                <li>Mengikuti organisasi kampus</li>
+                <li>Menjadi panitia acara kampus</li>
+                <li>Belajar pemrograman</li>
+                <li>Mengikuti seminar dan workshop</li>
+                <li>Berkontribusi dalam proyek sosial</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Portofolio</h2>
+            <hr>
+                <a href="video.html">Video</a>
+            
+                <p></p>
+            <a href="audio.html">Audio</a>
+        </section>
+        
+        <section>
+            <h2>Formulir Pendaftaran</h2>
+            <hr>
+            <form action="#" method="post" onsubmit="simpanData(); return false;">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+                <br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" name="gender">
+                    <option value="pria">Pria</option>
+                    <option value="wanita">Wanita</option>
+                </select>
+                <br>
+                
+                <label for="Pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="4" cols="30"></textarea>
+                <br>
+                
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Alinda Putri Devani</p>
+    </footer>
+</body>
+</html><section>
+    <h2>Kontak / Hubungi Saya</h2>
+    <hr>
+    <p>Jika Anda ingin menghubungi saya, silakan melalui salah satu media berikut:</p>
+    <ul>
+        <li>Email: <a href="mailto:alinda.devani23@student.uisi.ac.id">alinda.devani23@student.uisi.ac.id</a></li>
+        <li>WhatsApp: <a href="https://wa.me/6281918430980" target="_blank">Chat di WhatsApp</a></li>
+        <li>Instagram: <a href="https://instagram.com/alindadevani" target="_blank">@alindadevani</a></li>
+    </ul>
+</section>
